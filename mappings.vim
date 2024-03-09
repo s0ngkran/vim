@@ -17,6 +17,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set autochdir
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.xml, *.php"
 let mapleader = " "
 
@@ -86,7 +87,8 @@ nmap gc :Commentary<CR>
 vmap gc :Commentary<CR>
 
 " nerd tree
-nmap <leader>e :NERDTreeToggle<CR>
+let NERDTreeChDirMode=2
+nmap <leader>e :NERDTree .<CR>
 nmap <leader>o :NERDTreeToggle<CR>
 
 " session
