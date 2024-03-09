@@ -93,3 +93,6 @@ nmap <leader>o :NERDTreeToggle<CR>
 
 " session
 let g:session_autosave = "yes"
+
+" theme
+let g:gruvbox_contrast_dark = 'hard'
