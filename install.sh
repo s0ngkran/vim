@@ -51,9 +51,12 @@ Plug 'tpope/vim-commentary'
 # Plug 'xolox/vim-session'
 
 
-
 #
 echo "call plug#end()" >> ~/.vimrc
+
+# Install plugins using Vim-Plug
+vim +PlugInstall +qall
+
 # source mappings.vim
 echo "" >> ~/.vimrc
 echo "\" <leader>vm -> to open mappings.vim" >> ~/.vimrc 
@@ -70,8 +73,6 @@ echo "Copying mappings.vim to ~/.vim/mappings.vim"
 cp mappings.vim ~/.vim/mappings.vim
 
 
-# Install plugins using Vim-Plug
-vim +PlugInstall +qall
 
 echo "Setup complete. NERDTree should now be installed."
 
