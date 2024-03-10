@@ -65,14 +65,9 @@ echo "source ~/.vim/mappings.vim" >> ~/.vimrc
 # theme
 echo "colorscheme gruvbox" >> ~/.vimrc
 
-# install lazygit
-
-
 # copy all the content of mappings.vim to ~/.vim/mappings.vim
 echo "Copying mappings.vim to ~/.vim/mappings.vim"
 cp mappings.vim ~/.vim/mappings.vim
-
-
 
 echo "Setup complete. NERDTree should now be installed."
 

@@ -18,6 +18,8 @@ set smartcase
 set hlsearch
 set incsearch
 set autochdir
+set cursorline
+set cursorcolumn
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.xml, *.php"
 let mapleader = " "
 
@@ -27,7 +29,7 @@ nmap <leader>vv :tabnew ~/vim/mappings.vim<CR>
 nmap <leader>vi :tabnew ~/vim/install.sh<CR>
 nmap <leader>vr :tabnew ~/.vimrc<CR>
 nmap <leader>vm :tabnew ~/.vim/mappings.vim<CR>
-nmap <leader>vs :w<CR>:source ~/.vimrc<CR>:echo "success source vimrc"<CR>
+nmap <leader>as :w<CR>:source ~/.vimrc<CR>:echo "success source vimrc"<CR>
 
 " USER INTERFACE
 nmap <leader>un :set invnumber<CR>
@@ -38,16 +40,16 @@ nmap <leader>ax :! git log>~/.vim.result<CR> :e ~/.vim.result<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 nmap <leader>Q :q!<CR>
-nmap <leader>x :x<CR>
-nmap <leader>X :qa!<CR>
-nmap <leader>m :e#<CR>
+nmap <leader>x :qa!<CR>
+nmap <leader>m :tabnext<CR>
+nmap <leader>M :tabNext<CR>
 nmap ga :e#<CR>
 nmap \ :vsplit<CR><C-W>l
 nmap \| :split<CR><C-W>j
 nmap <leader>wm :tabnew<CR>:e#<CR>
-nmap L :tabnext<CR>
-nmap H :tabprevious<CR>
 nmap <leader>c :tabclose<CR>
+nmap H 0
+nmap L $
 
 " NAVIGATION
 nmap <C-j> <C-W>j
@@ -60,9 +62,12 @@ nmap <leader>h <C-W>h
 nmap <leader>l <C-W>l
 
 " TERMINAL
-nmap <leader>tl :vertical terminal<CR><C-w>L
-nmap <leader>tj :terminal<CR><C-w>J
-nmap <leader>tt :tab terminal<CR>
+" please config leader t for your own project
+nmap <leader>t :vertical terminal<CR><C-w>L
+" nmap <leader>tl :vertical terminal<CR><C-w>L
+" nmap <leader>tj :terminal<CR><C-w>J
+nmap <F7> :tab terminal<CR>
+tmap <F7> <C-w>N:tabNext<CR>  
 tmap <C-g> <C-w>N
 "force quit terminal
 tmap <C-f> <C-w>N:q!<CR> 
