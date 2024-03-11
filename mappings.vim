@@ -59,7 +59,8 @@ nmap <C-l> <C-W>l
 nmap <leader>j <C-W>j
 nmap <leader>k <C-W>k
 nmap <leader>h <C-W>h
-nmap <leader>l <C-W>l
+nmap <leader>ll <C-W>l
+nmap <leader>l :!lazygit<CR>
 
 " TERMINAL
 " please config leader t for your own project
@@ -93,9 +94,12 @@ vmap gc :Commentary<CR>
 
 " nerd tree
 let NERDTreeChDirMode=2
-nmap <leader>e :NERDTree .<CR>
-nmap <leader>o :NERDTreeToggle<CR>
+nmap <leader>e :NERDTreeToggle<CR>
+nmap <leader>o :NERDTree %:p:h<CR>
 
+" To register the descriptions when using the on-demand load feature,
+" use the autocmd hook to call which_key#register(), e.g., register for the Space key:
+" autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
 " session
 let g:session_autosave = "yes"
 
