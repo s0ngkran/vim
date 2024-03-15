@@ -73,6 +73,16 @@ tmap <C-g> <C-w>N
 "force quit terminal
 tmap <C-f> <C-w>N:q!<CR> 
 
+" MARKS
+" Remap lowercase marks to uppercase marks
+for c in range(char2nr('a'), char2nr('z'))
+    let char = nr2char(c)
+    " ma to mA
+    " 'a to `A
+    execute 'nnoremap m' . char . ' m' . toupper(char)
+    execute "nnoremap '" . char . ' `' . toupper(char)
+endfor
+
 " PLUGIN MAPPING
 " PLUGIN MAPPING
 " PLUGIN MAPPING
