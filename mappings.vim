@@ -50,6 +50,7 @@ nmap <leader>wm :tabnew<CR>:e#<CR>
 nmap <leader>c :tabclose<CR>
 nmap H 0
 nmap L $
+nmap Y vg_y
 
 " NAVIGATION
 nmap <C-j> <C-W>j
