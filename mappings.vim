@@ -51,6 +51,7 @@ nmap <leader>c :tabclose<CR>
 nmap H 0
 nmap L $
 nmap Y vg_y
+nmap q :echo "recorder is disabled; \<leader\>vm to enable"<CR>
 
 " NAVIGATION
 nmap <C-j> <C-W>j
