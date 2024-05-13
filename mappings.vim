@@ -108,6 +108,8 @@ vmap gc :Commentary<CR>
 let NERDTreeChDirMode=2
 nmap <leader>e :NERDTreeToggle<CR>
 nmap <leader>o :NERDTree %:p:h<CR>
+let NERDTreeMapChangeRoot='.'
+let NERDTreeMapUpdir='<BS>'
 
 " To register the descriptions when using the on-demand load feature,
 " use the autocmd hook to call which_key#register(), e.g., register for the Space key:
