@@ -11,7 +11,7 @@ fi
 
 # Check if Vim-Plug is installed
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
-  echo "Vim-Plug not found. Installing Vim-Plug..."
+  echo "Vim-Plug not found. Installing Vim-Plug... using curl"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
