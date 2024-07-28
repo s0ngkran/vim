@@ -119,3 +119,6 @@ let g:session_autosave = "yes"
 
 " theme
 let g:gruvbox_contrast_dark = 'hard'
+
+" avoid slow open nerdtree menu
+let g:NERDTreeMapMenu='M'
