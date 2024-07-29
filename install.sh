@@ -64,10 +64,14 @@ echo "source ~/.vim/mappings.vim" >> ~/.vimrc
 
 # theme
 echo "colorscheme gruvbox" >> ~/.vimrc
+echo "set t_Co=256" >> ~/.vimrc
 
 # copy all the content of mappings.vim to ~/.vim/mappings.vim
 echo "Copying mappings.vim to ~/.vim/mappings.vim"
 cp mappings.vim ~/.vim/mappings.vim
 
 echo "Setup complete. NERDTree should now be installed."
+
+echo 'set -g default-terminal "screen-256color"' >> ~/.tmux.conf
+echo 'set -ga terminal-overrides ",xterm-256color:RGB"' >> ~/.tmux.conf
 
