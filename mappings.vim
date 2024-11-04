@@ -63,6 +63,9 @@ nmap <leader>k <C-W>k
 nmap <leader>h <C-W>h
 nmap <leader>ll <C-W>l
 nmap <leader>l :!lazygit<CR>
+nmap <leader>r :r!
+vmap a %
+vmap x g_
 
 " TERMINAL
 " please config leader t for your own project
